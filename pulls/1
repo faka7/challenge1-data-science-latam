@@ -1,0 +1,31 @@
+# Análisis completo de datos de AluraStore
+
+Implementa el análisis completo del Challenge 1 en `AluraStoreLatam.ipynb` — anteriormente un esqueleto con celdas de código vacías. El notebook analiza los CSVs de las 4 tiendas para identificar la tienda menos eficiente que el Sr. Juan debería vender.
+
+## Secciones del análisis
+- **Ingresos**: Ingresos totales por tienda mediante suma de `Precio` + gráfico de barras
+- **Ventas por categoría**: Unidades vendidas por categoría — gráfico de barras agrupadas + gráficos circulares por tienda
+- **Calificaciones de clientes**: Promedio de `Calificación` por tienda + gráfico de barras con línea de referencia del promedio global
+- **Productos principales**: Top 10 productos por tienda — cuadrícula de barras horizontales 2×2
+- **Costo de envío**: Promedio de `Costo de envío` por tienda + gráfico de barras
+- **Puntuación compuesta**: Puntuación normalizada (0–1) ponderada en todas las métricas + gráfico de barras de clasificación
+
+## Recomendación final
+La Tienda 4 se identifica como la de peor rendimiento:
+- Menores ingresos (~$1.04B vs $1.15B de Tienda 1, una brecha de ~$112M)
+- Calificación de clientes por debajo del promedio (4.00 vs 4.05 máximo)
+- Puntuación de rendimiento compuesto más baja a pesar de tener el envío más económico
+
+La celda markdown final incluye una tabla completa de justificación y recomendación escrita.
+
+## Carga de datos
+```python
+tienda1 = pd.read_csv("https://raw.githubusercontent.com/alura-es-cursos/challenge1-data-science-latam/refs/heads/main/base-de-datos-challenge1-latam/tienda_1%20.csv")
+# ... tienda2, tienda3, tienda4
+tiendas = [tienda1, tienda2, tienda3, tienda4]
+```
+Todos los análisis posteriores operan sobre la lista compartida `tiendas` para mayor consistencia.
+
+---
+
+*Este pull request fue creado desde Copilot chat.*
